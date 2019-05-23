@@ -1,7 +1,7 @@
 /**
  * @author bonsoirzw
  * @date 2019/5/23
- * Ë³Ê±Õë´òÓ¡¾ØÕó
+ * é¡ºæ—¶é’ˆæ‰“å°çŸ©é˜µ
  */
 public class Problem29 {
     void PrintMatrixInCircle(int [][] matrix,int start){
@@ -10,21 +10,21 @@ public class Problem29 {
         int endX = column - 1 - start;
         int endY = row - 1 - start;
         /*
-        ´Ó×óµ½ÓÒ´òÓ¡Ò»ĞĞ
+        ä»å·¦åˆ°å³æ‰“å°ä¸€è¡Œ
          */
         for(int i=start;i<=endX;i++){
             System.out.print(matrix[start][i]+" ");
         }
         /*
-        ´ÓÉÏµ½ÏÂ´òÓ¡Ò»ĞĞ
+        ä»ä¸Šåˆ°ä¸‹æ‰“å°ä¸€è¡Œ
          */
         if(start<endY){
             for(int i=start+1;i<=endY;i++){
-                System.out.print(matrix[endX][i]+" ");
+                System.out.print(matrix[i][endX]+" ");
             }
         }
         /*
-        ´ÓÓÒµ½×ó´òÓ¡Ò»ĞĞ
+        ä»å³åˆ°å·¦æ‰“å°ä¸€è¡Œ
          */
         if(start<endX&&start<endY){
             for(int i=endX-1;i>=start;i--){
@@ -32,7 +32,7 @@ public class Problem29 {
             }
         }
         /*
-        ´ÓÏÂµ½ÉÏ´òÓ¡Ò»ĞĞ
+        ä»ä¸‹åˆ°ä¸Šæ‰“å°ä¸€è¡Œ
          */
         if(start<endX&&start<endY-1){
             for(int i=endY-1;i>=start+1;i--){
